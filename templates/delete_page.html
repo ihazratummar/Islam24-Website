@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles/delete_page.css">
+    <title>Account Deletation</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Delete User Data</h1>
+
+
+        <form action="/request_verification" method ="POST" >
+            <label for="email">Email</label>
+            <input placeholder="email" type="email" name="email" id="email" required class="input">
+            <button type="submit">Send Code</button>
+        </form>
+
+ 
+        <form action="/account_deletation" method="POST" >
+            <label for="verification_code">Verification Code:</label>
+            <input placeholder="Verificatio Code" type="text" name="verification_code" id="verification_code" required class="input">
+            <button type="submit">Verify Code</button>
+        </form>
+
+
+        {% if message %}
+            <p>{{message}}</p>
+        {% endif %}
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+#terms-of-service {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+#terms-of-service h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+#terms-of-service h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #333;
+}
+
+#terms-of-service p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+#terms-of-service a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#terms-of-service a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #terms-of-service h2 {
+        font-size: 1.5em;
+    }
+
+    #terms-of-service h3 {
+        font-size: 1.2em;
+    }
+
+    #terms-of-service p {
+        font-size: 1em;
+    }
+}

@@ -75,3 +75,19 @@ def request_verification():
     print("Session verification_code stored:", session['verification_code'])
 
     return render_template('delete_page.html', message = f"Verification code sent to your email." ,email_submitted =True)
+
+
+
+@app.route("/privacy_policy")
+def privacy_policy():
+
+    return render_template('privacy_policy.html')
+
+@app.route('/acknowledgement')
+def acknowledgement():
+    return render_template('acknowledgement.html')
+
+@app.route('/terms')
+def terms():
+    return render_template('terms.html')
+

@@ -20,7 +20,7 @@ def send_verification_email(email, code):
     msg = MIMEMultipart()
     msg['From'] = sender_email
     msg['To'] = email
-    msg['Subject'] = 'Your Verification Code'
+    msg['Subject'] = f'Email verification code: {code}'
 
     body = f"Your verification code is {code}. It expires in 10 minutes."
     msg.attach(MIMEText(body, 'plain'))

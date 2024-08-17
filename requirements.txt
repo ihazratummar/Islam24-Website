@@ -2,3 +2,4 @@ Flask~=3.0.3
 python-dotenv~=1.0.0
 Gunicorn
 flask_session
+firebase_admin

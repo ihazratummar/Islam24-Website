@@ -1,4 +1,4 @@
-from flask import Flask , render_template ,session, request
+from flask import Flask , render_template ,session, request, make_response
 import secrets
 from email_module import send_verification_email
 from firebaseModule import get_doc_id_by_email , delete_user_data
@@ -16,6 +16,9 @@ Session(app)
 
 @app.route('/')
 def homepage():
+
+    res = make_response(render_template("index.html"))
+    res.set_cookie("dark_mode", value = "True")
     return render_template("index.html")
 
 
@@ -72,6 +75,3 @@ def request_verification():
     print("Session verification_code stored:", session['verification_code'])
 
     return render_template('delete_page.html', message = f"Verification code sent to your email." ,email_submitted =True)
-
-if __name__ == "__main__":
-    app.run(debug= True)
